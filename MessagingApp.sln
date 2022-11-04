@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSockerServer", "WebSockerServer\WebSockerServer.csproj", "{09B65C24-8A00-4383-A897-9DC31AEC5E6E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebSocketServer", "WebSocketServer\WebSocketServer.csproj", "{C76ACBF6-8F56-4FE6-A87D-78CA967037AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRServer", "SignalRServer\SignalRServer.csproj", "{50C4BB5A-012F-4BE8-88BF-0718434F06F8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{09B65C24-8A00-4383-A897-9DC31AEC5E6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{09B65C24-8A00-4383-A897-9DC31AEC5E6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{09B65C24-8A00-4383-A897-9DC31AEC5E6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{09B65C24-8A00-4383-A897-9DC31AEC5E6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C76ACBF6-8F56-4FE6-A87D-78CA967037AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C76ACBF6-8F56-4FE6-A87D-78CA967037AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C76ACBF6-8F56-4FE6-A87D-78CA967037AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C76ACBF6-8F56-4FE6-A87D-78CA967037AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50C4BB5A-012F-4BE8-88BF-0718434F06F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50C4BB5A-012F-4BE8-88BF-0718434F06F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50C4BB5A-012F-4BE8-88BF-0718434F06F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50C4BB5A-012F-4BE8-88BF-0718434F06F8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
