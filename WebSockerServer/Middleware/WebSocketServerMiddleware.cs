@@ -7,7 +7,6 @@ namespace WebSocketServer.Middleware
     {
         private readonly ILogger<WebSocketServerMiddleware> _logger;
         private readonly WebSocketServerConnectionManager _manager;
-
         private readonly RequestDelegate _next;
 
         public WebSocketServerMiddleware(
@@ -28,6 +27,8 @@ namespace WebSocketServer.Middleware
                 _logger.LogInformation("WebSocket Connected");
 
                 string connId = _manager.AddSocket(webSocket);
+                await SendConnIdAsync(webSocket, connId);
+
                 await Receive(
                     webSocket,
                     async (result, buffer) =>
@@ -48,6 +49,12 @@ namespace WebSocketServer.Middleware
                 _logger.LogInformation("Hello from 2nd request delegate.");
                 await _next(context);
             }
+        }
+
+        private async Task SendConnIdAsync(WebSocket socket, string connId)
+        {
+            var buffer = Encoding.UTF8.GetBytes($"ConnId: {connId}");
+            await socket.SendAsync(buffer, WebSocketMessageType.Text, true, CancellationToken.None);
         }
 
         private async Task Receive(WebSocket socket, Action<WebSocketReceiveResult, byte[]> handleMessage)
